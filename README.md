@@ -1,3 +1,1 @@
-# API_analise_de_Logs
-
-## EM desenvolvimento 🔍💻
+# E desenvolvimento 🔍💻
