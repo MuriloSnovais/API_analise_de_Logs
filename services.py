@@ -1,17 +1,20 @@
 import json
 from collections import Counter
 
-def read_logs():
+def suspect_logs():
     with open('logs.json','r', encoding='utf-8') as archive:
         data = json.load(archive)
+        suspect_ips = []
+        final_ips = []
+
         for info_logs in data:
-            print(f'IP: {info_logs['ip']} | Login: {info_logs['login']}')
-              
+            if info_logs['login'] == 'failed':
+                suspect_ips.append(info_logs['ip'])
 
-read_logs()
+        count = Counter(suspect_ips)
+        for ips,times in count.items():
+            if times >= 5:
+                final_ips.append({"Suspect IP": f"{ips}", "Try": times})                 
+        return final_ips
 
-    
-
-
-
-
+suspect_logs()
