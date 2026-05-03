@@ -21,8 +21,8 @@ test_suspects_ips = [{
   },
   {
     "ip": "177.127.122.97", "login": "failed"
-  },]
-
+  },
+]
 
 
 def test_post_main_suspects():
