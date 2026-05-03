@@ -1,7 +1,6 @@
 from fastapi import FastAPI
-from services import suspect_logs
+from app.services import suspect_logs
 from pydantic import BaseModel
-from typing import Dict
 
 app = FastAPI()
 
@@ -16,4 +15,6 @@ def log():
 @app.post("/analise")
 def take_log(dados: list[logBase]):
     return suspect_logs(dados)
+
+
     
