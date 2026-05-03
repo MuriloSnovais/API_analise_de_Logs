@@ -15,6 +15,3 @@ def log():
 @app.post("/analise")
 def take_log(dados: list[logBase]):
     return suspect_logs(dados)
-
-
-    
