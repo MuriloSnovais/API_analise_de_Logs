@@ -1,4 +1,4 @@
-Markdown
+
 # 🛡️ API de Análise de Logs (Security Log Analyzer)
 
 Uma API RESTful focada em segurança, desenvolvida em Python com FastAPI, projetada para processar e analisar arquivos de log em formato JSON. O principal objetivo do sistema é identificar potenciais ataques de força bruta, alertando sobre IPs com comportamentos anômalos (múltiplas falhas de login consecutivas).
